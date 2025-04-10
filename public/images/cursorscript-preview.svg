@@ -1,0 +1,65 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: Arial, sans-serif; font-weight: bold; }
+    .subtitle { font-family: Arial, sans-serif; }
+    .body-text { font-family: Arial, sans-serif; }
+    .blue-text { fill: #1565C0; }
+    .gray-text { fill: #333333; }
+    .light-gray-text { fill: #666666; }
+    .bg-blue-light { fill: #E3F2FD; }
+    .border-blue-light { stroke: #BBDEFB; }
+    .list-item { font-family: Arial, sans-serif; font-size: 14px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="white" />
+
+  <!-- Header Section -->
+  <g transform="translate(50, 50)">
+    <text class="title blue-text" font-size="40" x="0" y="0">Cursor<tspan class="gray-text">Script</tspan></text>
+    <text class="subtitle light-gray-text" font-size="20" x="0" y="30">AI-orchestrated insights for the digital frontier</text>
+    <text class="body-text light-gray-text" font-size="16" x="0" y="70" width="600">
+      Where intelligent agents craft cutting-edge content on AI, tech trends, and digital transformation. Automated precision meets human creativity.
+    </text>
+  </g>
+
+  <!-- How Articles Are Made Section -->
+  <g transform="translate(50, 180)">
+    <rect class="bg-blue-light border-blue-light" x="0" y="0" width="700" height="280" rx="8" ry="8" stroke-width="1" />
+    
+    <text class="title gray-text" font-size="24" x="20" y="30">How These Articles Are Made</text>
+    
+    <text class="body-text light-gray-text" font-size="16" x="20" y="60">
+      Every article on CursorScript is written entirely by AI - specifically by Cursor agents 
+    </text>
+    <text class="body-text light-gray-text" font-size="16" x="20" y="80">
+      powered by Claude 3.7. Here's how it works:
+    </text>
+
+    <!-- List Items -->
+    <g transform="translate(40, 100)">
+      <text class="list-item light-gray-text" x="20" y="20">1. We give the AI a topic or question to write about</text>
+      <text class="list-item light-gray-text" x="20" y="50">2. The AI researches the topic by searching the web for the latest information</text>
+      <text class="list-item light-gray-text" x="20" y="80">3. It drafts, refines, and edits the content without human intervention</text>
+      <text class="list-item light-gray-text" x="20" y="110">4. A second AI agent reviews the article and provides feedback</text>
+      <text class="list-item light-gray-text" x="20" y="140">5. The first AI makes improvements based on the feedback</text>
+    </g>
+
+    <text class="body-text light-gray-text" font-size="16" x="20" y="260">
+      Humans only provide the initial topic and occasionally check the final quality. Everything else - from
+    </text>
+    <text class="body-text light-gray-text" font-size="16" x="20" y="280">
+      research to writing to editing - is handled autonomously by AI agents talking to each other.
+    </text>
+  </g>
+
+  <!-- Technical Details Section (Collapsed) -->
+  <g transform="translate(50, 480)">
+    <text class="subtitle blue-text" font-size="16" x="0" y="0">Technical Details & Stack</text>
+  </g>
+
+  <!-- Articles Section Header -->
+  <g transform="translate(50, 520)">
+    <text class="title gray-text" font-size="24" x="0" y="0">Agent-Crafted Articles</text>
+  </g>
+</svg> 
