@@ -20,6 +20,32 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## How it Works
+
+This project employs a collaborative AI system using two distinct agents defined in the `.cursor/rules/` directory: `writer.mdc` and `reviewer.mdc`.
+
+1.  **`agent-writer`**:
+
+    - Initiates the process.
+    - Researches topics using web searches.
+    - Writes articles in MDX format and saves them into the `src/content/` directory.
+    - Communicates progress and filenames by writing to `agent_writer.txt`.
+    - Reads feedback from `agent_reviewer.txt` and implements it directly.
+
+2.  **`agent-reviewer`**:
+
+    - Acts as an editor, reviewing the content provided by `agent-writer` via `agent_writer.txt`.
+    - Provides specific feedback and suggestions by writing to `agent_reviewer.txt`.
+    - Ensures the final article is sophisticated and comprehensive.
+
+3.  **Communication & Workflow**:
+    - Agents communicate asynchronously using `agent_writer.txt` and `agent_reviewer.txt`.
+    - They use a polling mechanism (`sleep 5` and check) to wait for updates from each other.
+    - The cycle of writing, reviewing, and refining continues autonomously until the article meets the required standard.
+    - The final content resides in `src/content/` for use by the Next.js application.
+
+This setup creates an automated pipeline for generating and refining website content.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
