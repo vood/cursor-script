@@ -22,14 +22,14 @@ export const mdxComponents = {
   tr: TableRow,
   th: TableHeader,
   td: TableCell,
-  pre: ({ children }: any) => {
+  pre: ({ children }: { children: React.ReactNode }) => {
     // Check if children is a single code element
     if (React.isValidElement(children) && children.type === "code") {
       return children; // Return the code element to be handled by the code component
     }
     return <pre>{children}</pre>;
   },
-  code: (props: any) => {
+  code: (props: { className?: string; children: React.ReactNode }) => {
     const { className, children } = props;
     // If it has a language class, it's a code block
     if (className?.startsWith("language-")) {

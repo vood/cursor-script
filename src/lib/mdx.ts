@@ -13,7 +13,8 @@ export interface Post {
   date: string; // Expecting 'YYYY-MM-DD' format in frontmatter
   excerpt: string;
   content: React.ReactElement; // Compiled MDX content
-  [key: string]: any; // Allow other frontmatter fields
+  tags?: string[]; // Optional tags array
+  [key: string]: unknown; // Allow other frontmatter fields with unknown type
 }
 
 const postsDirectory = path.join(process.cwd(), "src/content/blog");
@@ -62,7 +63,10 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     }
 
     const result = await compileMDX<{
-      // Define types for frontmatter if needed, e.g., title: string
+      title?: string;
+      date?: string;
+      excerpt?: string;
+      tags?: string[];
     }>({
       source: content,
       options: {
@@ -82,6 +86,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       date: data.date || "",
       excerpt: data.excerpt || "",
       content: result.content,
+      tags: data.tags,
       ...data,
     };
   } catch (error) {

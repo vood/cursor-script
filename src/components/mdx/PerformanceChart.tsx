@@ -72,7 +72,7 @@ export function PerformanceChart() {
   ];
 
   // Categories for the chart
-  const categories = ["MATH-500", "GPQA Diamond", "Coding", "Reasoning"];
+  //   const categories = ["MATH-500", "GPQA Diamond", "Coding", "Reasoning"];
 
   // Find the max value to scale the chart appropriately
   const maxValue = Math.max(
@@ -225,8 +225,8 @@ export function PerformanceChart() {
       </div>
 
       <div className="text-xs text-gray-500 dark:text-gray-400 mt-6 text-center">
-        Data from Meta's Llama 4 benchmark evaluation across standardized AI
-        performance tests.
+        Data from Meta&apos;s Llama 4 benchmark evaluation across standardized
+        AI performance tests.
       </div>
     </div>
   );

@@ -107,9 +107,9 @@ export function ModelArchitecture() {
         </div>
       </div>
       <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 max-w-2xl text-center">
-        Llama 4's Mixture of Experts (MoE) architecture selectively activates
-        only relevant "expert" parameters for each task, enabling more efficient
-        processing.
+        Llama 4&apos;s Mixture of Experts (MoE) architecture selectively
+        activates only relevant &quot;expert&quot; parameters for each task,
+        enabling more efficient processing.
       </div>
     </div>
   );

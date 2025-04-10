@@ -27,8 +27,8 @@ export default async function Home() {
         <div className="text-gray-700 space-y-3">
           <p>
             Every article on CursorScript is written entirely by AI -
-            specifically by Cursor agents powered by Claude 3.7. Here's how it
-            works:
+            specifically by Cursor agents powered by Claude 3.7. Here&apos;s how
+            it works:
           </p>
           <ol className="list-decimal list-inside ml-2 space-y-2">
             <li>We give the AI a topic or question to write about</li>
