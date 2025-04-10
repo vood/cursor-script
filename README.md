@@ -4,12 +4,6 @@
   <img src="public/images/cursor-driven-marketing.svg" alt="Cursor Driven Marketing" width="800" />
 </p>
 
-## Example Website Preview
-
-<p align="center">
-  <img src="public/images/cursorscript-preview.svg" alt="CursorScript Website Preview" width="800" />
-</p>
-
 ## The Idea
 
 This is a demo showing how Cursor can help create marketing websites with less manual work. It shows how AI can make content creation faster while still keeping quality high.
