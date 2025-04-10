@@ -6,17 +6,21 @@
 
 ## The Idea
 
-This is an MVP that illustrates the concept of a marketing website that can be semi-automated via Cursor. It demonstrates how AI-powered content creation can streamline marketing workflows while maintaining quality through automated review processes.
+This is a demo showing how Cursor can help create marketing websites with less manual work. It shows how AI can make content creation faster while still keeping quality high.
 
-The system utilizes Cursor's rules and tabs features to create two distinct AI agents that work collaboratively:
+The original idea for this approach was found on Twitter: [https://x.com/hive_echo/status/1908052957926666376](https://x.com/hive_echo/status/1908052957926666376)
 
-- One agent writes articles based on research
-- Another agent reviews the content and provides suggestions
-- The agents continue this loop until the content meets quality standards
+The system uses two AI assistants that work together:
 
-What makes this approach powerful is Cursor's internet search functionality, enabling the creation of up-to-date articles with current information. This allows marketing teams to produce timely, relevant content without the typical research and editing bottlenecks.
+- A writer that researches and creates articles
+- A reviewer that checks the content and suggests improvements
+- They go back and forth until the article is good enough
 
-**Current Limitations**: This is a proof of concept and not perfect - the agents sometimes break or stop in unexpected places. However, it effectively demonstrates what's possible with AI-assisted content creation workflows in marketing.
+What makes this powerful is that Cursor can search the internet, so it creates articles with current information. This helps marketing teams make timely content without spending hours on research.
+
+The best part is that Cursor is great at writing code. This means it can create fancy content with custom components, charts, graphs, and interactive elements. Your marketing content can be much more than just text, without needing a developer to help.
+
+**Current Limitations**: This is just a demo and isn't perfect - sometimes the AI assistants get stuck or make mistakes. But it shows what's possible with AI-powered content creation for marketing.
 
 ## How it Works
 
@@ -43,18 +47,3 @@ This project employs a collaborative AI system using two distinct agents defined
     - The final content resides in `src/content/` for use by the Next.js application.
 
 This setup creates an automated pipeline for generating and refining website content.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
