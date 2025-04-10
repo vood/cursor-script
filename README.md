@@ -1,24 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cursor Driven Marketing
 
-## Getting Started
+<p align="center">
+  <img src="public/images/cursor-driven-marketing.svg" alt="Cursor Driven Marketing" width="800" />
+</p>
 
-First, run the development server:
+## The Idea
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is an MVP that illustrates the concept of a marketing website that can be semi-automated via Cursor. It demonstrates how AI-powered content creation can streamline marketing workflows while maintaining quality through automated review processes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The system utilizes Cursor's rules and tabs features to create two distinct AI agents that work collaboratively:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- One agent writes articles based on research
+- Another agent reviews the content and provides suggestions
+- The agents continue this loop until the content meets quality standards
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+What makes this approach powerful is Cursor's internet search functionality, enabling the creation of up-to-date articles with current information. This allows marketing teams to produce timely, relevant content without the typical research and editing bottlenecks.
+
+**Current Limitations**: This is a proof of concept and not perfect - the agents sometimes break or stop in unexpected places. However, it effectively demonstrates what's possible with AI-assisted content creation workflows in marketing.
 
 ## How it Works
 
