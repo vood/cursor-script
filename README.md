@@ -22,6 +22,21 @@ The best part is that Cursor is great at writing code. This means it can create 
 
 **Current Limitations**: This is just a demo and isn't perfect - sometimes the AI assistants get stuck or make mistakes. But it shows what's possible with AI-powered content creation for marketing.
 
+## Creating a Custom Content Marketer Agent
+
+You can easily create your own Content Marketer agent directly in Cursor using the custom models feature:
+
+1. Enable custom models in the Features section in the Cursor Settings
+2. Create a custom model from the models dropdown (as shown in the UI)
+3. Paste content from the `prompt.txt` file into advanced instructions in the Advanced options setting
+4. Make sure "All tools" are selected, and ensure that `claude-3.7-sonnet-thinking` is selected as the model
+5. Name it "Content Marketer" and save
+6. Select the created model from the model dropdown
+7. Ask it to write an article
+8. Profit!
+
+This approach gives you a dedicated content creation assistant right in your editor, without needing to set up the more complex agent system described below.
+
 ## How it Works
 
 This project employs a collaborative AI system using two distinct agents defined in the `.cursor/rules/` directory: `writer.mdc` and `reviewer.mdc`.
