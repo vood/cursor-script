@@ -1,0 +1,83 @@
+---
+title: "Rich Content Demo: LaTeX & Twitter"
+description: "Demonstrating LaTeX equations and Twitter embeds in MDX"
+date: "2025-04-11"
+---
+
+# Rich Content in MDX
+
+This demonstration shows how to use advanced rich content elements in your MDX files.
+
+## LaTeX Equations
+
+LaTeX is perfect for displaying mathematical formulas in your content.
+
+### Block Equations
+
+With remark-math, you can use simple dollar signs for inline math: $E = mc^2$
+
+And double dollars for display math:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+Euler's identity, often considered one of the most beautiful equations in mathematics:
+
+$$e^{i\pi} + 1 = 0$$
+
+A more complex example showing an integral:
+
+$$\int_0^{\infty} \frac{\sin(x)}{x} \, dx = \frac{\pi}{2}$$
+
+### Inline Equations
+
+You can use inline math with dollar signs like this: $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$ or the Pythagorean theorem $a^2 + b^2 = c^2$.
+
+## Twitter/X Embeds
+
+Social media content adds real-world context to your technical content. Here are some thought-provoking tweets from AI leaders:
+
+### Sam Altman on AI Regulation
+
+<TwitterEmbed tweetId="1627110888321978368" />
+
+### Andrej Karpathy on GPT-4.5
+
+<TwitterEmbed tweetId="1895213020982472863" />
+
+### OpenAI on Memory
+
+<TwitterEmbed tweetId="1910378768172212636" theme="dark" />
+
+## Combining Rich Content
+
+You can combine these elements with other MDX components to create comprehensive, engaging content:
+
+> If you think you understand quantum mechanics, you don't understand quantum mechanics.
+>
+> — Richard Feynman
+
+This quote relates to the complexity of quantum physics, which uses equations like the Schrödinger equation:
+
+$$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat H\Psi(\mathbf{r},t)$$
+
+## Code and Math Together
+
+When discussing algorithms, you might want to show both code and the mathematical principles behind it:
+
+```python
+def fibonacci(n):
+    """Calculate the nth Fibonacci number"""
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+The Fibonacci sequence can be expressed mathematically as:
+
+$$F_n = F_{n-1} + F_{n-2}$$
+
+With the closed-form solution (Binet's formula):
+
+$$F_n = \frac{(1+\sqrt{5})^n-(1-\sqrt{5})^n}{2^n\sqrt{5}}$$

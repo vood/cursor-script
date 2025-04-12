@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
 
 // Define the structure of a post
@@ -72,9 +74,21 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       options: {
         parseFrontmatter: false, // We already parsed it with gray-matter
         mdxOptions: {
-          rehypePlugins: [rehypeHighlight],
-          remarkPlugins: [remarkGfm],
-          // You might need to configure rehypeHighlight styles separately
+          remarkPlugins: [
+            remarkGfm,
+            remarkMath, // Add remark-math to handle math in markdown
+          ],
+          rehypePlugins: [
+            rehypeHighlight,
+            [
+              rehypeKatex,
+              {
+                output: "html", // Render to HTML
+                throwOnError: false, // Don't throw on invalid LaTeX
+                strict: false, // Be forgiving with syntax errors
+              },
+            ],
+          ],
         },
       },
       components: mdxComponents,

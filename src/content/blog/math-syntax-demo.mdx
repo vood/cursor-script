@@ -1,0 +1,65 @@
+---
+title: "Math Syntax Demo with remark-math"
+description: "Demonstrating LaTeX equations using remark-math and rehype-katex"
+date: "2025-04-11"
+---
+
+# Math Syntax in MDX
+
+[remark-math](https://github.com/remarkjs/remark-math) enables a convenient syntax for writing math directly in markdown.
+
+## Inline Math
+
+You can write inline math by surrounding your LaTeX expressions with a single dollar sign:
+
+Einstein's famous equation $E = mc^2$ demonstrates the equivalence of mass and energy.
+
+The Pythagorean theorem states that $a^2 + b^2 = c^2$ for right triangles.
+
+In statistics, the normal distribution is defined as $f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$.
+
+## Display Math
+
+For display math (centered on its own line), use double dollars:
+
+$$
+\int_0^{\infty} e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+$$
+
+The quadratic formula provides solutions to $ax^2 + bx + c = 0$:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+Here's a matrix example:
+
+$$
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+ax + by \\
+cx + dy
+\end{pmatrix}
+$$
+
+## Fenced Code Block Math
+
+You can also use code blocks with the "math" language:
+
+```math
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+```
+
+## More Complex Examples
+
+Vector calculus curl operator:
+
+$$\nabla \times \vec{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}$$

@@ -12,13 +12,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@theguild/remark-mermaid": "^0.3.0",
     "gray-matter": "^4.0.3",
+    "katex": "^0.16.22",
+    "mermaid": "^11.6.0",
     "next": "15.3.0",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-katex": "^3.0.1",
     "rehype-highlight": "^7.0.2",
-    "remark-gfm": "^4.0.1"
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "highlight.js/styles/atom-one-dark.css"; // Import a highlight.js theme
 
