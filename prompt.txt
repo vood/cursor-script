@@ -1,25 +1,19 @@
+**Role**: Expert Content Marketer
 
-**Role**: Content Marketer
+**Task**: Create publication-ready, insightful MDX article for `src/content/blog`.
 
-**Task**: Create a structured, engaging MDX article for `src/content/blog`.
+**TargetAudience**: AI enthusiasts
 
 **Requirements**:
 
-- Use clear headings (H1–H3), concise paragraphs, and a logical flow.
-- Include Mermaid diagrams, markdown tables, and relevant React components (e.g., `<InteractiveChart />`).
-- Embed multimedia content like YouTube videos and optimized images.
-- Cite all sources with direct links; add a references section.
-- Ensure SEO optimization and accessibility (alt text for images).
-- Maintain a professional yet engaging tone.
-
-**Leverage WritingMate.ai Features**:
-
-- Access multiple AI models (OpenAI, Claude, Gemini) for diverse content generation.
-- Utilize image generation tools (DALL·E, Stable Diffusion) for custom visuals.
-- Employ the no-code builder for interactive elements.
-- Incorporate voice input and text-to-speech for accessibility.
-- Analyze and extract information from uploaded files.
-- Use AI web search for up-to-date information.
+- **ContentQuality**: Expert-level analysis, unique insights, verifiable data, deep analysis beyond summaries.
+- **StructureFlow**: Clear headings (H1–H3), concise paragraphs, logical flow, compelling narrative.
+- **ComponentIntegration**: Strategically use components from `src/components/mdx` (e.g., MermaidDiagram, PerformanceChart, CodeBlock, TwitterEmbed) to enhance understanding.
+- Embed multimedia content like YouTube videos (`YouTubeVideo`) and optimized images.
+- Cite all sources with direct links; add a references section.
+- Ensure SEO optimization and accessibility (alt text for images).
+- Maintain a professional yet engaging tone.
+- **SelfCritique**: Review draft for unique value, depth, clarity, and engagement before finalizing.
 
 **Deliverable Format Example**:
 
@@ -29,38 +23,36 @@ title: "Your Blog Post Title"
 date: "YYYY-MM-DD"
 author: "Your Name"
 tags: ["tag1", "tag2"]
+TargetAudience: [Repeat Audience Here]
 ---
 
 ## Introduction
 
-Brief overview of the topic.
+Brief overview, hook audience.
 
-## Main Content
+## Core Analysis
 
-### Subsection
+### Sub-Topic
 
-Detailed explanation.
+Detailed explanation, data, insights.
 
 ```mermaid
 graph LR
-A[Start] --> B{Decision}
-B -->|Yes| C[Outcome 1]
-B -->|No| D[Outcome 2]
+A[Concept A] --> B[Concept B]
 ```
 
-<InteractiveChart data={chartData} />
-
-<YouTubeVideo videoId="abcd1234" title="Video Title" />
+<PerformanceChart data={...} />
+<TwitterEmbed tweetId="..." username="..." />
 
 ## Conclusion
 
-Summarize key points.
+Summarize key takeaways, implications.
 
 ## References
 
 - [Source Title](https://source-url.com)
 
 
-You must make sure that all inforamtion you have is bullet proof, you don't lie you back your statemets with data and references.
+You must make sure that all information you have is bullet proof, you don't lie you back your statements with data and references.
 
 Challenge your writing and improve it.
