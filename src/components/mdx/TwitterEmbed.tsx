@@ -2,6 +2,18 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+// Define Twitter widget types
+interface TwitterWidget {
+  widgets: {
+    load: (element?: HTMLElement) => Promise<void>;
+  };
+}
+
+// Define window with Twitter widget
+interface WindowWithTwitter extends Window {
+  twttr?: TwitterWidget;
+}
+
 /**
  * Props for the TwitterEmbed component
  */
@@ -34,12 +46,14 @@ export const TwitterEmbed: React.FC<TwitterEmbedProps> = ({
   const [error, setError] = useState<string | null>(null);
   const tweetRef = useRef<HTMLDivElement>(null);
 
-  if (!tweetId) {
-    console.warn("TwitterEmbed: tweetId is required");
-    return null;
-  }
-
   useEffect(() => {
+    // Don't proceed if no tweetId
+    if (!tweetId) {
+      console.warn("TwitterEmbed: tweetId is required");
+      setLoading(false);
+      return;
+    }
+
     // Reset state
     setLoading(true);
     setError(null);
@@ -47,7 +61,8 @@ export const TwitterEmbed: React.FC<TwitterEmbedProps> = ({
     // Function to load the Twitter widget script
     const loadScript = () => {
       return new Promise<void>((resolve, reject) => {
-        if ((window as any).twttr) {
+        const windowWithTwitter = window as WindowWithTwitter;
+        if (windowWithTwitter.twttr) {
           resolve();
           return;
         }
@@ -68,7 +83,8 @@ export const TwitterEmbed: React.FC<TwitterEmbedProps> = ({
       try {
         await loadScript();
 
-        if (!tweetRef.current || !(window as any).twttr?.widgets) {
+        const windowWithTwitter = window as WindowWithTwitter;
+        if (!tweetRef.current || !windowWithTwitter.twttr?.widgets) {
           throw new Error("Twitter widget not available");
         }
 
@@ -99,7 +115,7 @@ export const TwitterEmbed: React.FC<TwitterEmbedProps> = ({
         tweetRef.current.appendChild(blockquote);
 
         // Render the tweet
-        await (window as any).twttr.widgets.load(tweetRef.current);
+        await windowWithTwitter.twttr.widgets.load(tweetRef.current);
 
         // Check if tweet was actually rendered
         setTimeout(() => {
@@ -152,6 +168,11 @@ export const TwitterEmbed: React.FC<TwitterEmbedProps> = ({
     width: "100%",
     maxWidth: "550px",
   };
+
+  // Return early if no tweetId, but after hooks are called
+  if (!tweetId) {
+    return null;
+  }
 
   return (
     <div

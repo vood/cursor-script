@@ -22,8 +22,6 @@ interface YouTubeVideoProps {
 export const YouTubeVideo: React.FC<YouTubeVideoProps> = ({
   videoId,
   title,
-  width = 560,
-  height = 315,
 }) => {
   if (!videoId) {
     console.warn("YouTubeVideo: videoId is required");
