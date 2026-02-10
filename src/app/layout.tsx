@@ -97,6 +97,12 @@ export default function RootLayout({
                 >
                   Terms of Service
                 </a>
+                <a
+                  href="https://mentioned.to"
+                  className="text-gray-500 hover:text-blue-600 transition-colors text-sm"
+                >
+                  Reddit Marketing Tool
+                </a>
               </div>
             </div>
           </div>
